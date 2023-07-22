@@ -16,19 +16,16 @@ public class Main {
         }
         return sum;
     }
-//    public static String errorText(int exeption){
-//        String text = switch (exeption) {
-//            case -1 -> "the length is shorter than the minimum stated";
-//            case -2 -> "not found";
-//            case -3 -> "null instead of the array";
-//            default -> "the element index = " + exeption;
-//        };
-//        return text;
-//    }
+
 
     public static void main(String[] args) {
-        int[][] arr = {{1, 0}, {5, 0}};
+        int[][] arr = {{1, 0}, {1, 0}};
 
-        System.out.println(sumArray(arr));
+        try{
+            System.out.println(sumArray(arr));
+        }
+        catch (RuntimeException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
